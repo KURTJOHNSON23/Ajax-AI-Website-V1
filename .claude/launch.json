@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Ajax AI — Next.js Dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000,
+      "cwd": "C:\\Users\\kurtj\\Documents\\ajax-ai"
+    },
+    {
+      "name": "Ajax AI — Next.js Production Preview",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start"],
+      "port": 3000,
+      "cwd": "C:\\Users\\kurtj\\Documents\\ajax-ai"
+    }
+  ]
+}
