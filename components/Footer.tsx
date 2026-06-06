@@ -7,7 +7,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <path d="M11 2L4 11h6l-1 7 7-9h-6l1-7z" fill="#00D4FF" stroke="#00D4FF" strokeWidth="0.5" strokeLinejoin="round" />
+                <path d="M11 2L4 11h6l-1 7 7-9h-6l1-7z" fill="#10B981" stroke="#10B981" strokeWidth="0.5" strokeLinejoin="round" />
               </svg>
               <span className="font-syne font-bold text-lg text-white">
                 Ajax <span className="text-cyan-400">AI</span>

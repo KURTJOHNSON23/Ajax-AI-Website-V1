@@ -31,7 +31,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-2">
           <LightningIcon />
           <span className="font-syne font-bold text-xl text-white tracking-tight">
-            Ajax <span className="text-cyan-400">AI</span>
+            Ajax <span className="text-cyan-400">AI Solutions</span>
           </span>
         </a>
 
@@ -106,8 +106,8 @@ function LightningIcon() {
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
       <path
         d="M11 2L4 11h6l-1 7 7-9h-6l1-7z"
-        fill="#00D4FF"
-        stroke="#00D4FF"
+        fill="#10B981"
+        stroke="#10B981"
         strokeWidth="0.5"
         strokeLinejoin="round"
       />

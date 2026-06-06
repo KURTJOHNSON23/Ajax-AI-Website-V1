@@ -139,7 +139,7 @@ export default function ContactForm() {
               >
                 <div className="w-16 h-16 rounded-full bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center mb-6">
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                    <path d="M5 14l7 7 11-13" stroke="#00D4FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M5 14l7 7 11-13" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
                 <h3 className="font-syne font-bold text-2xl text-white mb-3">
