@@ -165,7 +165,7 @@ function AnimatedPhone() {
               className="flex-1 bg-cyan-400 rounded-sm origin-bottom"
               style={{
                 height: `${h * 100}%`,
-                animation: `barWave ${0.8 + Math.random() * 0.8}s ease-in-out infinite`,
+                animation: `barWave ${0.8 + (i % 5) * 0.18}s ease-in-out infinite`,
                 animationDelay: `${i * 0.07}s`,
               }}
             />

@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Automations", href: "#automations" },
-  { label: "Voice AI", href: "#voice-ai" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Automations", href: "/#automations" },
+  { label: "Voice AI", href: "/#voice-ai" },
+  { label: "Live Demo", href: "/demo" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -28,7 +29,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <LightningIcon />
           <span className="font-syne font-bold text-xl text-white tracking-tight">
             Ajax <span className="text-cyan-400">AI Solutions</span>
@@ -51,7 +52,7 @@ export default function Navbar() {
         {/* CTA + hamburger */}
         <div className="flex items-center gap-4">
           <a
-            href="#contact"
+            href="/#contact"
             className="hidden md:inline-flex items-center px-5 py-2 border border-cyan-400 text-cyan-400 font-dm font-medium text-sm rounded-md hover:bg-cyan-400 hover:text-navy-900 transition-all duration-200"
           >
             Book a Call
@@ -87,7 +88,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMenuOpen(false)}
                 className="inline-flex items-center justify-center px-5 py-3 border border-cyan-400 text-cyan-400 font-dm font-medium text-sm rounded-md hover:bg-cyan-400 hover:text-navy-900 transition-all duration-200"
               >
