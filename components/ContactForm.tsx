@@ -8,7 +8,6 @@ type FormData = {
   businessName: string;
   email: string;
   phone: string;
-  businessType: string;
   challenge: string;
   source: string;
 };
@@ -20,7 +19,6 @@ const initialForm: FormData = {
   businessName: "",
   email: "",
   phone: "",
-  businessType: "",
   challenge: "",
   source: "",
 };
@@ -32,7 +30,6 @@ function validate(data: FormData): Errors {
   if (!data.email.trim()) errors.email = "Email is required";
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) errors.email = "Enter a valid email";
   if (!data.phone.trim()) errors.phone = "Phone number is required";
-  if (!data.businessType) errors.businessType = "Please select a business type";
   if (!data.challenge.trim()) errors.challenge = "Please describe your challenge";
   if (!data.source) errors.source = "Please let us know how you found us";
   return errors;
@@ -58,14 +55,13 @@ export default function ContactForm() {
     }
     setLoading(true);
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      setSubmitted(true);
+      if (res.ok) setSubmitted(true);
     } catch {
-      // still show success for demo
       setSubmitted(true);
     } finally {
       setLoading(false);
@@ -198,22 +194,6 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <select
-                    value={form.businessType}
-                    onChange={set("businessType")}
-                    className={inputClass("businessType")}
-                  >
-                    <option value="" disabled>Business Type</option>
-                    <option>Trades &amp; Construction</option>
-                    <option>Estate Agent</option>
-                    <option>Recruitment</option>
-                    <option>Accountancy</option>
-                    <option>Other</option>
-                  </select>
-                  {errors.businessType && <p className="font-dm text-xs text-red-400 mt-1">{errors.businessType}</p>}
-                </div>
-
-                <div>
                   <textarea
                     rows={3}
                     placeholder="What's your biggest challenge?"
@@ -232,8 +212,9 @@ export default function ContactForm() {
                   >
                     <option value="" disabled>How did you hear about us?</option>
                     <option>Google</option>
-                    <option>Referral</option>
                     <option>Social Media</option>
+                    <option>Referral / Word of Mouth</option>
+                    <option>LinkedIn</option>
                     <option>Cold Outreach</option>
                     <option>Other</option>
                   </select>
