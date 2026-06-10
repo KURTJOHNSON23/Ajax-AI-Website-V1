@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { RetellWebClient } from "retell-client-js-sdk";
 
 // Replace this with your Retell agent ID once you've created the plumber demo agent
 const DEMO_AGENT_ID = "agent_78e598ed92378032a776a2989f";
@@ -12,7 +11,7 @@ type CallStatus = "idle" | "connecting" | "active" | "ended" | "error";
 export default function VoiceDemo() {
   const [status, setStatus] = useState<CallStatus>("idle");
   const [duration, setDuration] = useState(0);
-  const clientRef = useRef<RetellWebClient | null>(null);
+  const clientRef = useRef<InstanceType<typeof import("retell-client-js-sdk")["RetellWebClient"]> | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -36,6 +35,7 @@ export default function VoiceDemo() {
 
       const { access_token } = await res.json();
 
+      const { RetellWebClient } = await import("retell-client-js-sdk");
       const client = new RetellWebClient();
       clientRef.current = client;
 
