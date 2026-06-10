@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RetellWebClient } from "retell-client-js-sdk";
 
 // Replace this with your Retell agent ID once you've created the plumber demo agent
-const DEMO_AGENT_ID = "YOUR_AGENT_ID_HERE";
+const DEMO_AGENT_ID = "agent_78e598ed92378032a776a2989f";
 
 type CallStatus = "idle" | "connecting" | "active" | "ended" | "error";
 
