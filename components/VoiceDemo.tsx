@@ -23,11 +23,6 @@ export default function VoiceDemo() {
   }, []);
 
   async function startCall() {
-    if (DEMO_AGENT_ID === "YOUR_AGENT_ID_HERE") {
-      setStatus("error");
-      return;
-    }
-
     setStatus("connecting");
 
     try {
@@ -233,12 +228,10 @@ export default function VoiceDemo() {
               </div>
               <div>
                 <p className="font-syne font-bold text-lg text-white mb-1">
-                  {DEMO_AGENT_ID === "YOUR_AGENT_ID_HERE" ? "Demo not configured yet" : "Something went wrong"}
+                  {"Something went wrong"}
                 </p>
                 <p className="font-dm text-sm text-white/50">
-                  {DEMO_AGENT_ID === "YOUR_AGENT_ID_HERE"
-                    ? "The agent ID needs to be added before this demo goes live."
-                    : "Please try again in a moment."}
+                  {"Please try again in a moment."}
                 </p>
               </div>
               <button
