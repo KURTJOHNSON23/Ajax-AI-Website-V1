@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
+import Chatbot from "../components/Chatbot";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.variable} ${dmSans.variable} font-dm antialiased bg-navy-900 text-white`}>
         {children}
+        <Chatbot />
       </body>
     </html>
   );
