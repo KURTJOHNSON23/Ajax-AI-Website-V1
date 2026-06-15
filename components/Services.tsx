@@ -7,7 +7,7 @@ const services = [
     icon: <PhoneWaveIcon />,
     title: "AI Voice Agents",
     description:
-      "AI receptionists that answer calls, qualify leads, and book appointments 24/7.",
+      "AI Voice Agents that answer calls, qualify leads, and book appointments 24/7.",
   },
   {
     icon: <FlowchartIcon />,
