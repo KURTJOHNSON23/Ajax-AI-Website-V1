@@ -14,6 +14,9 @@ type FormData = {
 
 type Errors = Partial<Record<keyof FormData, string>>;
 
+// Same free Web3Forms key as the chatbot — submissions email to admin@ajaxai.solutions.
+const WEB3FORMS_ACCESS_KEY = "f146e43f-15b3-4fd8-8396-8f8452d78c36";
+
 const initialForm: FormData = {
   fullName: "",
   businessName: "",
@@ -55,10 +58,19 @@ export default function ContactForm() {
     }
     setLoading(true);
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New contact form lead — Ajax AI",
+          name: form.fullName,
+          email: form.email,
+          business_name: form.businessName,
+          phone: form.phone,
+          challenge: form.challenge,
+          source: form.source,
+        }),
       });
       if (res.ok) setSubmitted(true);
     } catch {
