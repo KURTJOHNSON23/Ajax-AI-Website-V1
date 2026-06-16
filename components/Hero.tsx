@@ -72,8 +72,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
             className="font-syne font-extrabold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
           >
-            Automate Everything.{" "}
-            <span className="text-cyan-400">Grow Faster.</span>
+            Every Call Answered.{" "}
+            <span className="text-cyan-400">Every Job Booked.</span>
           </motion.h1>
 
           <motion.p

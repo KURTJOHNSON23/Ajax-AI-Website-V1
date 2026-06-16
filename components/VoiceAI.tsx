@@ -32,7 +32,7 @@ export default function VoiceAI() {
             </h2>
             <p className="font-dm text-white/50 leading-relaxed mb-8">
               Our voice agents use ElevenLabs voices and are deployed via Retell AI — they
-              can answer inbound calls, make outbound follow-ups, and handle objections
+              can answer inbound calls, qualify callers, and handle objections
               naturally.
             </p>
 
@@ -153,7 +153,7 @@ function AnimatedPhone() {
           <div className="w-14 h-14 rounded-full bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mx-auto mb-2">
             <span className="font-syne font-bold text-cyan-400 text-lg">AI</span>
           </div>
-          <p className="font-syne font-bold text-white text-sm">Ajax Assistant</p>
+          <p className="font-syne font-bold text-white text-sm">Ajax AI Assistant</p>
           <p className="font-dm text-xs text-green-400 mt-0.5">● Active call</p>
         </div>
 

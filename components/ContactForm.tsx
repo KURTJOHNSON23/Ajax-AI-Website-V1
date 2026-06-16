@@ -102,7 +102,7 @@ export default function ContactForm() {
             </h2>
             <p className="font-dm text-white/50 leading-relaxed mb-10">
               Book a free 20-minute discovery call. We&apos;ll show you exactly what we&apos;d
-              automate in your business — and what it would be worth.
+              automate in your business.
             </p>
 
             <div className="space-y-4">
@@ -112,11 +112,11 @@ export default function ContactForm() {
               </div>
               <div className="flex items-center gap-3 font-dm text-sm text-white/60">
                 <span className="text-base">📧</span>
-                hello@ajaxautomation.com
+                admin@ajaxai.solutions
               </div>
               <div className="flex items-center gap-3 font-dm text-sm text-white/60">
                 <span className="text-base">🌐</span>
-                ajaxautomation.com
+                ajaxai.solutions
               </div>
             </div>
 

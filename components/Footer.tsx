@@ -36,10 +36,13 @@ export default function Footer() {
           <div>
             <h4 className="font-syne font-bold text-sm text-white mb-4">Company</h4>
             <ul className="space-y-2">
-              {["About Us", "How It Works", "Case Studies", "Contact"].map((item) => (
-                <li key={item}>
-                  <a href="#contact" className="font-dm text-sm text-white/40 hover:text-white/70 transition-colors">
-                    {item}
+              {[
+                { label: "How It Works", href: "#how-it-works" },
+                { label: "Contact", href: "#contact" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="font-dm text-sm text-white/40 hover:text-white/70 transition-colors">
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -52,13 +55,13 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="font-dm text-sm text-white/40">Hampton, London</li>
               <li>
-                <a href="mailto:hello@ajaxautomation.com" className="font-dm text-sm text-white/40 hover:text-white/70 transition-colors">
-                  hello@ajaxautomation.com
+                <a href="mailto:admin@ajaxai.solutions" className="font-dm text-sm text-white/40 hover:text-white/70 transition-colors">
+                  admin@ajaxai.solutions
                 </a>
               </li>
               <li>
-                <a href="#" className="font-dm text-sm text-white/40 hover:text-white/70 transition-colors">
-                  ajaxautomation.com
+                <a href="https://ajaxai.solutions" className="font-dm text-sm text-white/40 hover:text-white/70 transition-colors">
+                  ajaxai.solutions
                 </a>
               </li>
             </ul>
@@ -68,7 +71,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="font-dm text-xs text-white/30">
-            © 2025 Ajax AI Ltd. Hampton, London.
+            © 2026 Ajax AI Solutions. Hampton, London.
           </p>
           <p className="font-dm text-xs text-white/20">
             Built with Make.com · ElevenLabs · Twilio

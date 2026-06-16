@@ -4,22 +4,34 @@ import { motion } from "framer-motion";
 
 const automations = [
   {
-    title: "Never Lose a Quote Again",
-    badge: "Saves 4 hrs/week",
+    title: "AI Booking & Rescheduling",
+    badge: "24/7 coverage",
     description:
-      "When a lead goes cold, Ajax triggers a multi-step follow-up: email, SMS, and an AI voice call — all without lifting a finger.",
+      "Your AI receptionist handles inbound calls, books appointments, and sends confirmations — even at midnight.",
     steps: [
-      "Customer requests quote",
-      "CRM updated",
-      "Auto email (Day 1)",
-      "SMS reminder (Day 3)",
-      "AI voice call (Day 5)",
-      "Booking confirmed",
+      "Inbound call",
+      "AI answers & qualifies",
+      "Books slot in calendar",
+      "Confirmation + reminder sent",
     ],
   },
   {
-    title: "Drip Campaigns on Autopilot",
-    badge: "3x response rate",
+    title: "Never Lose a Quote Again",
+    badge: "Saves 4 hrs/week",
+    description:
+      "When a lead goes cold, Ajax triggers a multi-step follow-up with automated emails and SMS reminders — all without lifting a finger.",
+    steps: [
+      "Customer calls to request quote",
+      "Quote sent + logged in CRM",
+      "Follow-up email (Day 1)",
+      "SMS reminder (Day 3)",
+      "Email + SMS nudge (Day 5)",
+      "Quote accepted",
+    ],
+  },
+  {
+    title: "Nurture Every Lead on Autopilot",
+    badge: "10x response rate",
     description:
       "Leads get the right message at the right time. Fully personalised, fully automated — from first touch to booked call.",
     steps: [
@@ -29,20 +41,6 @@ const automations = [
       "Email 2 — Case Study (+3d)",
       "Email 3 — Offer (+7d)",
       "Call booked",
-    ],
-  },
-  {
-    title: "AI Booking & Rescheduling",
-    badge: "24/7 coverage",
-    description:
-      "Your AI receptionist handles inbound calls, books appointments, and sends confirmations — even at midnight.",
-    steps: [
-      "Missed call",
-      "AI calls back",
-      "Qualifies lead",
-      "Books slot in Cal.com",
-      "Confirmation sent",
-      "Reminder 24hrs before",
     ],
   },
 ];
