@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { SolarPanelArray, SunGlow } from "@/components/SolarDecor";
 
 const typingWords = [
   "Quote Follow-Ups",
   "Missed Call Responses",
-  "Calendar Booking",
-  "Lead Nurturing",
+  "Survey Bookings",
+  "Lead Capture",
 ];
 
 function useTypewriter(words: string[], speed = 80, pause = 1800) {
@@ -46,10 +47,14 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy-900 grid-bg"
     >
-      {/* Radial glow */}
+      {/* Radial glow + solar backdrop */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-400/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-400/3 rounded-full blur-3xl" />
+        {/* Low sun on the horizon */}
+        <SunGlow className="absolute bottom-24 right-[12%] w-[420px] h-[420px]" />
+        {/* Panel array along the bottom */}
+        <SolarPanelArray className="absolute bottom-0 left-0 w-full h-[160px] md:h-[240px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 grid md:grid-cols-2 gap-12 items-center w-full">
@@ -60,9 +65,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-400/30 text-cyan-400 text-xs font-dm font-medium mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-              AI-Powered Agency · London
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-solar-400/30 text-solar-400 text-xs font-dm font-medium mb-6">
+              <SunIcon />
+              Built for Solar Installers · London
             </span>
           </motion.div>
 
@@ -82,8 +87,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="font-dm text-lg text-white/60 mb-6 max-w-lg leading-relaxed"
           >
-            Ajax AI builds AI-powered systems that handle your follow-ups,
-            bookings, and client calls — so you don&apos;t have to.
+            Ajax AI builds AI-powered systems for solar installers that handle
+            your enquiries, survey bookings, and customer calls — so you don&apos;t
+            have to.
           </motion.p>
 
           <motion.div
@@ -125,7 +131,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.55 }}
             className="font-dm text-xs text-white/30"
           >
-            Serving London businesses · Built on Make.com, ElevenLabs &amp; Twilio
+            Serving UK solar installers · Built on Make.com, ElevenLabs &amp; Twilio
           </motion.p>
         </div>
 
@@ -140,6 +146,15 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+    </svg>
   );
 }
 
@@ -163,7 +178,7 @@ function PhoneMockup() {
         {/* Call card */}
         <div className="bg-navy-700 border border-cyan-400/20 rounded-xl p-4 mb-3">
           <p className="font-syne font-bold text-white text-sm mb-1">Sarah Johnson</p>
-          <p className="font-dm text-xs text-white/40 mb-3">Lead · Solar Co.</p>
+          <p className="font-dm text-xs text-white/40 mb-3">Lead · Solar panel enquiry</p>
           <div className="flex items-end gap-1 h-8 mb-2">
             {[0.4, 0.7, 1.0, 0.6, 0.9, 0.5, 0.8, 0.4, 0.7, 1.0, 0.6, 0.3].map((h, i) => (
               <div
@@ -177,7 +192,7 @@ function PhoneMockup() {
               />
             ))}
           </div>
-          <p className="font-dm text-xs text-cyan-400">Booking appointment...</p>
+          <p className="font-dm text-xs text-cyan-400">Booking roof survey...</p>
         </div>
 
         {/* Info card */}

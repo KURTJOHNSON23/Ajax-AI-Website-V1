@@ -16,16 +16,16 @@ const services = [
       "End-to-end automations that connect your CRM, calendar, and messaging in one flow.",
   },
   {
-    icon: <MessageArrowIcon />,
-    title: "Smart Follow-Ups",
+    icon: <LeadCaptureIcon />,
+    title: "Lead Capturing",
     description:
-      "Automated quote and email follow-up sequences that recover lost revenue on autopilot.",
+      "Every enquiry from your website, calls, and forms captured and logged in your CRM instantly.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-navy-900">
+    <section id="services" className="py-24 bg-navy-900 solar-cells">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <span className="font-dm text-xs uppercase tracking-widest text-cyan-400 mb-3 block">
-            Our Services
+            Our Services · Built for Solar
           </span>
           <h2 className="font-syne font-bold text-4xl md:text-5xl text-white">
             What Ajax AI Does
@@ -90,12 +90,12 @@ function FlowchartIcon() {
   );
 }
 
-function MessageArrowIcon() {
+function LeadCaptureIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-      <line x1="9" y1="10" x2="15" y2="10" />
-      <polyline points="12 7 15 10 12 13" />
+      <path d="M3 4h18l-7 8v7l-4 2v-9L3 4z" strokeLinejoin="round" />
+      <circle cx="18.5" cy="17.5" r="3.5" />
+      <path d="M18.5 16v3M17 17.5h3" strokeLinecap="round" />
     </svg>
   );
 }

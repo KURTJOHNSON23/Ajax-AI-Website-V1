@@ -176,7 +176,7 @@ function AnimatedPhone() {
         <div className="space-y-2">
           <div className="bg-navy-700 rounded-lg px-3 py-2 text-left">
             <p className="font-dm text-[10px] text-white/40 mb-0.5">AI Agent</p>
-            <p className="font-dm text-xs text-white/70">&quot;Hi, I&apos;m calling about your quote...&quot;</p>
+            <p className="font-dm text-xs text-white/70">&quot;Hi, I&apos;m calling about your solar quote...&quot;</p>
           </div>
           <div className="bg-cyan-400/10 border border-cyan-400/10 rounded-lg px-3 py-2 text-left">
             <p className="font-dm text-[10px] text-cyan-400/60 mb-0.5">Customer</p>

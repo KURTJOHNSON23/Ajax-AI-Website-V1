@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Automations from "@/components/Automations";
 import VoiceAI from "@/components/VoiceAI";
 import HowItWorks from "@/components/HowItWorks";
 import ROICalculator from "@/components/ROICalculator";
@@ -15,7 +14,6 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <Automations />
         <VoiceAI />
         <HowItWorks />
         <ROICalculator />

@@ -20,6 +20,11 @@ const config: Config = {
           500: "#059669",
           600: "#047857",
         },
+        solar: {
+          300: "#FBD38D",
+          400: "#F5B942",
+          500: "#E0A62E",
+        },
       },
       fontFamily: {
         syne: ["var(--font-syne)", "sans-serif"],
