@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 
 const AI_MONTHLY_COST = 150;
 
@@ -153,13 +152,7 @@ export default function ROICalculator() {
     <section id="roi-calculator" className="py-24 bg-navy-800">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-14"
-        >
+        <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="font-dm text-xs uppercase tracking-widest text-cyan-400 mb-3 block">
             ROI Calculator
           </span>
@@ -170,15 +163,9 @@ export default function ROICalculator() {
             Every unanswered call is a job going to whoever picks up next. Move the
             sliders to match your business and see the number.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="grid lg:grid-cols-2 gap-8 items-start"
-        >
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Inputs */}
           <div className="bg-navy-900 border border-white/10 rounded-2xl p-7 md:p-9 space-y-8">
             <Slider
@@ -298,7 +285,7 @@ export default function ROICalculator() {
               the AI answers, qualifies and books calls you would otherwise miss.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
