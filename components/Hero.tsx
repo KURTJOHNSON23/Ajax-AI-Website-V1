@@ -163,7 +163,7 @@ function PhoneMockup() {
         {/* Call card */}
         <div className="bg-navy-700 border border-cyan-400/20 rounded-xl p-4 mb-3">
           <p className="font-syne font-bold text-white text-sm mb-1">Sarah Johnson</p>
-          <p className="font-dm text-xs text-white/40 mb-3">Lead · Plumbing Co.</p>
+          <p className="font-dm text-xs text-white/40 mb-3">Lead · Solar Co.</p>
           <div className="flex items-end gap-1 h-8 mb-2">
             {[0.4, 0.7, 1.0, 0.6, 0.9, 0.5, 0.8, 0.4, 0.7, 1.0, 0.6, 0.3].map((h, i) => (
               <div

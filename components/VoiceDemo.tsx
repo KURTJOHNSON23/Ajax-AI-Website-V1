@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Replace this with your Retell agent ID once you've created the plumber demo agent
+// Replace this with your Retell agent ID once you've created the solar demo agent
 const DEMO_AGENT_ID = "agent_78e598ed92378032a776a2989f";
 
 type CallStatus = "idle" | "connecting" | "active" | "ended" | "error";
@@ -86,7 +86,7 @@ export default function VoiceDemo() {
           Hear the AI in action
         </h1>
         <p className="font-dm text-white/60 text-lg leading-relaxed">
-          This is a real AI receptionist handling a plumbing business. Click the button and it will answer your call — just like it would for one of our clients.
+          This is a real AI receptionist handling a solar installation business. Click the button and it will answer your call — just like it would for one of our clients.
         </p>
       </div>
 
@@ -96,8 +96,8 @@ export default function VoiceDemo() {
           <p className="font-syne font-bold text-xs text-white/40 uppercase tracking-widest mb-4">The scenario</p>
           <div className="space-y-3">
             {[
-              { icon: "🏢", label: "Business", value: "Swift Flow Plumbing" },
-              { icon: "🎯", label: "Task", value: "Book a job — leak repair" },
+              { icon: "🏢", label: "Business", value: "Brightside Solar" },
+              { icon: "🎯", label: "Task", value: "Book a free roof survey" },
               { icon: "🤖", label: "Handled by", value: "Ajax AI Voice Agent" },
             ].map(({ icon, label, value }) => (
               <div key={label} className="flex items-center gap-3">

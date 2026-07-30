@@ -6,7 +6,7 @@ import VoiceDemo from "@/components/VoiceDemo";
 export const metadata: Metadata = {
   title: "Live Voice AI Demo — Ajax AI Solutions",
   description:
-    "Hear our AI receptionist in action. Call the demo and experience how Ajax AI handles real customer bookings for a plumbing business.",
+    "Hear our AI receptionist in action. Call the demo and experience how Ajax AI books roof surveys for a solar installation business.",
 };
 
 export default function DemoPage() {
