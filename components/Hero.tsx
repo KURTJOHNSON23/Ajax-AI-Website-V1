@@ -77,7 +77,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
             className="font-syne font-extrabold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
           >
-            Every Call Answered.{" "}
+            Every Lead Captured.{" "}
             <span className="text-cyan-400">Every Job Booked.</span>
           </motion.h1>
 
@@ -87,9 +87,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="font-dm text-lg text-white/60 mb-6 max-w-lg leading-relaxed"
           >
-            Ajax AI builds AI-powered systems for solar installers that handle
-            your enquiries, survey bookings, and customer calls — so you don&apos;t
-            have to.
+            Ajax AI builds AI-powered Lead Capturing Systems for Solar
+            Installers, that handles your enquiries, survey bookings, and
+            customer calls — so you don&apos;t have to.
           </motion.p>
 
           <motion.div
