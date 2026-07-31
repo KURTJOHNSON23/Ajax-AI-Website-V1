@@ -4,12 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 const AI_MONTHLY_COST = 150;
 
-const recoveryOptions = [
-  { label: "Conservative", value: 50 },
-  { label: "Realistic", value: 65 },
-  { label: "Best case", value: 80 },
-];
-
 function formatGBP(value: number) {
   return new Intl.NumberFormat("en-GB", {
     style: "currency",
@@ -134,7 +128,7 @@ export default function ROICalculator() {
   const [missRate, setMissRate] = useState(25);
   const [jobValue, setJobValue] = useState(7000);
   const [closeRate, setCloseRate] = useState(10);
-  const [recovery, setRecovery] = useState(65);
+  const recovery = 65;
 
   const missedCalls = (calls * missRate) / 100;
   const lostPerMonth = missedCalls * (closeRate / 100) * jobValue;
@@ -204,28 +198,6 @@ export default function ROICalculator() {
               display={`${closeRate}%`}
               onChange={setCloseRate}
             />
-
-            <div className="pt-2 border-t border-white/5">
-              <p className="font-dm text-sm text-white/60 mb-3 pt-5">
-                How many missed calls AI recovers
-              </p>
-              <div className="flex gap-2">
-                {recoveryOptions.map((option) => (
-                  <button
-                    key={option.value}
-                    onClick={() => setRecovery(option.value)}
-                    className={`flex-1 min-w-0 px-2 py-2.5 rounded-md font-dm text-xs sm:text-sm transition-all duration-200 border ${
-                      recovery === option.value
-                        ? "bg-cyan-400 text-navy-900 border-cyan-400 font-medium"
-                        : "bg-transparent text-white/50 border-white/10 hover:text-white hover:border-white/25"
-                    }`}
-                  >
-                    {option.label}
-                    <span className="block text-xs opacity-70">{option.value}%</span>
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Results */}

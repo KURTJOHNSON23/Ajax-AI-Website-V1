@@ -4,10 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const bullets = [
-  "Sounds natural — not robotic",
-  "Works 24/7, never calls in sick",
-  "Books appointments directly into your calendar",
+  "Outbound Voice Agent calls every new lead within 20 seconds.",
+  "Books Appointments/Site Surveys directly into your calendar",
   "Handles FAQs and objections",
+  "Works 24/7, never calls in sick",
 ];
 
 export default function VoiceAI() {
