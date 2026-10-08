@@ -17,6 +17,8 @@ type Errors = Partial<Record<keyof FormData, string>>;
 // Same free Web3Forms key as the chatbot — submissions email to admin@ajaxai.solutions.
 const WEB3FORMS_ACCESS_KEY = "f146e43f-15b3-4fd8-8396-8f8452d78c36";
 
+const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/xu227c7b4aaqlok17277iiojjwqmr21t";
+
 const initialForm: FormData = {
   fullName: "",
   businessName: "",
@@ -57,6 +59,17 @@ export default function ContactForm() {
       return;
     }
     setLoading(true);
+    fetch(MAKE_WEBHOOK_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: new URLSearchParams({
+        name: form.fullName,
+        email: form.email,
+        business_name: form.businessName,
+        phone: form.phone,
+        source: form.source,
+      }),
+    }).catch(() => {});
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
