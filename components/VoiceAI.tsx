@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const bullets = [
   "Outbound Voice Agent calls every new lead within 20 seconds.",
@@ -11,8 +10,6 @@ const bullets = [
 ];
 
 export default function VoiceAI() {
-  const [modalOpen, setModalOpen] = useState(false);
-
   return (
     <section id="voice-ai" className="py-24 bg-[#0D1526]">
       <div className="max-w-7xl mx-auto px-6">
@@ -55,14 +52,6 @@ export default function VoiceAI() {
                 </motion.li>
               ))}
             </ul>
-
-            <button
-              onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-cyan-400/10 border border-cyan-400/40 text-cyan-400 font-dm font-medium rounded-md hover:bg-cyan-400 hover:text-navy-900 hover:border-cyan-400 transition-all duration-200"
-            >
-              <PlayIcon />
-              Hear a Demo Call
-            </button>
           </motion.div>
 
           {/* Right — animated phone */}
@@ -78,64 +67,7 @@ export default function VoiceAI() {
         </div>
       </div>
 
-      {/* Demo modal */}
-      <AnimatePresence>
-        {modalOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
-            onClick={() => setModalOpen(false)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-navy-800 border border-white/10 rounded-2xl p-8 w-full max-w-md"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-syne font-bold text-white text-xl">Demo Call</h3>
-                <button
-                  onClick={() => setModalOpen(false)}
-                  className="text-white/40 hover:text-white transition-colors"
-                >
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="15" y1="5" x2="5" y2="15" />
-                    <line x1="5" y1="5" x2="15" y2="15" />
-                  </svg>
-                </button>
-              </div>
-              <div className="bg-navy-700 rounded-xl p-4 mb-4 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center">
-                  <PlayIcon />
-                </div>
-                <div>
-                  <p className="font-dm text-sm text-white font-medium">Ajax AI Demo Agent</p>
-                  <p className="font-dm text-xs text-white/40">Inbound qualification call</p>
-                </div>
-              </div>
-              <audio controls className="w-full rounded-lg" aria-label="Demo call audio">
-                <source src="" type="audio/mpeg" />
-                Your browser does not support audio.
-              </audio>
-              <p className="font-dm text-xs text-white/30 mt-3 text-center">
-                Full demo available on request — book a call below.
-              </p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
-  );
-}
-
-function PlayIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-      <path d="M4 2l10 6-10 6V2z" />
-    </svg>
   );
 }
 

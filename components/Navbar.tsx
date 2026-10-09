@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "Voice AI", href: "/#voice-ai" },
   { label: "ROI Calculator", href: "/#roi-calculator" },
-  { label: "Live Demo", href: "/demo" },
   { label: "Contact", href: "/#contact" },
 ];
 
