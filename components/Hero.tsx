@@ -87,9 +87,12 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="font-dm text-lg text-white/60 mb-6 max-w-lg leading-relaxed"
           >
-            Ajax AI builds AI-powered Lead Capturing Systems for Solar
-            Installers, that handles your enquiries, survey bookings, and
-            customer calls — so you don&apos;t have to.
+            <span className="block text-white font-semibold mb-2">
+              Stop letting warm leads go to voicemail.
+            </span>
+            Our AI Voice Agent answers every solar enquiry the moment it
+            lands, asks the right questions, and books the survey for you.
+            Answers FAQ and all general enquiries about your Business.
           </motion.p>
 
           <motion.div
