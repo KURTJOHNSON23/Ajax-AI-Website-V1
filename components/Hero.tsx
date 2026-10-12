@@ -90,9 +90,10 @@ export default function Hero() {
             <span className="block text-white font-semibold mb-2">
               Stop letting warm leads go to voicemail.
             </span>
-            Our AI Voice Agent answers every solar enquiry the moment it
-            lands, asks the right questions, and books the survey for you.
-            Answers FAQ and all general enquiries about your Business.
+            Our AI Voice Agent answers every enquiry the moment it lands,
+            asks the right questions, and books the survey/jobs for you.
+            Answers FAQs and all general enquiries about your Business...
+            24/7
           </motion.p>
 
           <motion.div
