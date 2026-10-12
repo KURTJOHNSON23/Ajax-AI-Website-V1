@@ -59,7 +59,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 grid md:grid-cols-2 gap-12 items-center w-full">
         {/* Left — text */}
-        <div>
+        <div className="min-w-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            className="font-syne font-extrabold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
+            className="font-syne font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
           >
             Every Lead Captured.{" "}
             <span className="text-cyan-400">Every Job Booked.</span>
