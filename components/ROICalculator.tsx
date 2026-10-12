@@ -182,7 +182,7 @@ export default function ROICalculator() {
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Inputs */}
-          <div className="bg-navy-900 border border-white/10 rounded-2xl p-7 md:p-9 space-y-8">
+          <div className="min-w-0 bg-navy-900 border border-white/10 rounded-2xl p-7 md:p-9 space-y-8">
             <Slider
               label="Inbound calls per month"
               value={calls}
@@ -223,13 +223,13 @@ export default function ROICalculator() {
           </div>
 
           {/* Results */}
-          <div className="space-y-5">
+          <div className="min-w-0 space-y-5">
             <div className="relative overflow-hidden bg-navy-900 border border-cyan-400/20 rounded-2xl p-8 md:p-9">
               <div className="absolute -top-24 -right-24 w-56 h-56 bg-cyan-400/10 blur-3xl rounded-full pointer-events-none" />
               <p className="relative font-dm text-sm text-white/50 mb-2">
                 You are losing roughly
               </p>
-              <p className="relative font-syne font-extrabold text-5xl md:text-6xl text-cyan-400 mb-2 tabular-nums">
+              <p className="relative font-syne font-extrabold text-3xl sm:text-5xl md:text-6xl text-cyan-400 mb-2 tabular-nums">
                 {formatGBP(animatedYear)}
               </p>
               <p className="relative font-dm text-sm text-white/50">
