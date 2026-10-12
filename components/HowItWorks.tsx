@@ -41,7 +41,7 @@ export default function HowItWorks() {
             The Process
           </span>
           <h2 className="font-syne font-bold text-4xl md:text-5xl text-white">
-            From Zero to Automated in 7 Days
+            From Zero to Automated in 14 Days
           </h2>
         </motion.div>
 

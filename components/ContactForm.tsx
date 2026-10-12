@@ -111,7 +111,7 @@ export default function ContactForm() {
               Get In Touch
             </span>
             <h2 className="font-syne font-bold text-4xl md:text-5xl text-white mb-6">
-              Let&apos;s Build Your Automation
+              Let&apos;s Build Your AI Voice Agent
             </h2>
             <p className="font-dm text-white/50 leading-relaxed mb-10">
               Book a free 20-minute discovery call. We&apos;ll show you exactly what we&apos;d

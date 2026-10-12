@@ -57,6 +57,7 @@ function Slider({
   step,
   display,
   onChange,
+  editable = false,
 }: {
   label: string;
   value: number;
@@ -65,14 +66,34 @@ function Slider({
   step: number;
   display: string;
   onChange: (value: number) => void;
+  editable?: boolean;
 }) {
-  const pct = ((value - min) / (max - min)) * 100;
+  const pct = Math.min(100, Math.max(0, ((value - min) / (max - min)) * 100));
 
   return (
     <div>
       <div className="flex items-baseline justify-between mb-3">
         <label className="font-dm text-sm text-white/60">{label}</label>
-        <span className="font-syne font-bold text-lg text-cyan-400">{display}</span>
+        {editable ? (
+          <span className="flex items-baseline font-syne font-bold text-lg text-cyan-400">
+            £
+            <input
+              type="number"
+              inputMode="numeric"
+              min={0}
+              step={step}
+              value={value === 0 ? "" : value}
+              placeholder="0"
+              onChange={(e) =>
+                onChange(Math.min(1000000, Math.max(0, Number(e.target.value))))
+              }
+              aria-label={`${label} in pounds`}
+              className="w-28 bg-transparent text-right outline-none border-b border-cyan-400/40 focus:border-cyan-400 tabular-nums"
+            />
+          </span>
+        ) : (
+          <span className="font-syne font-bold text-lg text-cyan-400">{display}</span>
+        )}
       </div>
       <input
         type="range"
@@ -188,6 +209,7 @@ export default function ROICalculator() {
               step={250}
               display={formatGBP(jobValue)}
               onChange={setJobValue}
+              editable
             />
             <Slider
               label="Close rate on answered calls"
